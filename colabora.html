@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colabora con nosotros | Constructora Pérez Cornejo</title>
+    <meta name="description"
+        content="¿Quieres colaborar con Constructora Pérez Cornejo? Empresas, proveedores e instituciones: unimos fuerzas para ejecutar proyectos con calidad y eficiencia.">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --pc-oscuro: #48494a;
+            --pc-verde: #748c64;
+        }
+
+        .bg-pc-gradient {
+            background: linear-gradient(135deg, var(--pc-oscuro), var(--pc-verde));
+        }
+
+        .text-pc {
+            color: var(--pc-oscuro) !important;
+        }
+
+        .btn-pc {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-pc:hover {
+            background: #2D4A8C;
+            /* mismo hover que usas en otras páginas */
+            border-color: #2D4A8C;
+            color: #fff;
+        }
+
+        .icon-pill {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(116, 140, 100, .12);
+            color: var(--pc-verde);
+            font-size: 28px;
+        }
+
+        .card-feature {
+            border: none;
+            background: #f6f8f7;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .card-feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .list-check li {
+            margin-bottom: .4rem
+        }
+
+        .list-check i {
+            color: var(--pc-verde)
+        }
+
+        .badge-soft {
+            background: rgba(72, 73, 74, .08);
+            color: var(--pc-oscuro);
+            border: 1px solid rgba(72, 73, 74, .12);
+        }
+
+        .accordion-button:focus {
+            box-shadow: none
+        }
+
+        .accordion-button {
+            font-weight: 600
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: #f4f5f5;
+            color: var(--pc-oscuro)
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 2rem
+        }
+
+        /* Aumenta la legibilidad del texto en el hero */
+        .hero-title {
+            text-shadow: 0 10px 28px rgba(0, 0, 0, .45), 0 2px 6px rgba(0, 0, 0, .25);
+        }
+
+        .hero-lead {
+            text-shadow: 0 8px 24px rgba(0, 0, 0, .45), 0 2px 6px rgba(0, 0, 0, .25);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (igual estilo del sitio) -->
+    <header class="fixed-top shadow">
+        <div class="text-white py-1 px-3" style="font-size:14px;background: linear-gradient(135deg, #48494a, #748c64)">
+            <div class="container d-flex justify-content-center align-items-center flex-wrap">
+                <div class="fw-semibold text-center">
+                    <a href="tel:627593507" class="text-decoration-none" style="color:white;"> COLABORA CON NOSOTROS</a>
+                    &nbsp;&nbsp;
+                    <a href="tel:627593507" class="text-decoration-none" style="color:white;">
+                        <img src="gif/telefono_blanco.gif" alt="" height="30" width="30"> 627 593 507
+                    </a>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="d-flex gap-3 fw-semibold" style="text-align:center;">
+                    <a href="mailto:info@construccionesmanuelperez.es" class="text-decoration-none"
+                        style="color:#ffffff;">
+                        info@construccionesmanuelperez.es
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color:white;">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="img/Group 219.png" alt="Logo Pérez Cornejo" style="height:50px;">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                        <!-- Otros enlaces -->
+                        <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="/">Inicio</a>
+                        </li>
+
+                        <!-- Dropdown 1 -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold text-dark" href="#" role="button"
+                                data-bs-toggle="dropdown">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm" style="background-color: #c0c4c6;">
+                                <li><a class="dropdown-item text-white" href="naves-industriales.html">Naves
+                                        industriales</a></li>
+                                <li><a class="dropdown-item text-white" href="vivienda-nueva.html">Vivienda
+                                        nueva</a>
+                                </li>
+                                <li><a class="dropdown-item text-white" href="reforma-integral-de-viviendas.html">Reforma integral de
+                                        viviendas</a></li>
+                                <li><a class="dropdown-item text-white" href="locales-comerciales.html">Locales
+                                        comerciales</a></li>
+                                <li><a class="dropdown-item text-white" href="piscinas.html">Piscinas</a></li>
+                                <li><a class="dropdown-item text-white" href="ampliaciones.html">Ampliaciones</a>
+                                </li>
+                                <li><a class="dropdown-item text-white" href="adecuacion-de-caminos-rurales.html">Adecuación de caminos
+                                        rurales</a></li>
+                            </ul>
+                        </li>
+
+                         <!-- Colabora con nosotros -->
+                        <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="colabora.html">Colabora con nosotros</a>
+                        </li>
+
+                        <!-- Trabaja con nosotros -->
+                        <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="trabaja.html">Trabaja con nosotros</a>
+                        </li>
+
+                        <!-- Otros enlaces -->
+                        <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="text-white d-flex align-items-center"
+        style="background: linear-gradient(0deg, rgba(24,32,24,.45), rgba(24,32,24,.45)), url('img/bg_colabora.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:60vh;">
+        <div class="container py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-8">
+                    <span class="badge badge-soft rounded-pill px-3 py-2 mb-3">Alianzas y Proveedores</span>
+                    <h1 class="display-5 fw-bold mb-3 hero-title">Colabora con Constructora Pérez Cornejo</h1>
+                    <p class="lead mb-4 hero-lead">Unimos experiencia, recursos y talento para ejecutar obras con
+                        calidad,
+                        seguridad y eficiencia.</p>
+                    <a href="#form-colabora"
+                        class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold btn-pc">Quiero colaborar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ COLABORAR -->
+    <section class="container py-5">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <h2 class="fw-bold text-pc mb-3">¿Por qué colaborar con nosotros?</h2>
+                <p class="mb-3">Somos una constructora con trayectoria en edificación, reformas y obra civil en la
+                    provincia de Córdoba. Buscamos alianzas estables con <strong>proveedores, subcontratas, estudios de
+                        arquitectura, inmobiliarias e instituciones</strong> para sumar capacidades y ofrecer resultados
+                    sobresalientes.</p>
+                <ul class="list-unstyled list-check">
+                    <li><i class="fas fa-check me-2"></i> Compromiso con la calidad y los plazos.</li>
+                    <li><i class="fas fa-check me-2"></i> Comunicación cercana y planificación rigurosa.</li>
+                    <li><i class="fas fa-check me-2"></i> Seguridad y normativa como prioridad.</li>
+                    <li><i class="fas fa-check me-2"></i> Visión sostenible y eficiente.</li>
+                </ul>
+                <div class="d-flex gap-2 mt-3">
+                    <span class="badge rounded-pill px-3 py-2 badge-soft">Construcción</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-soft">Instalaciones</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-soft">Materiales</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-soft">Ingeniería</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="card card-feature p-4 h-100">
+                            <div class="icon-pill mb-3"><i class="fas fa-handshake"></i></div>
+                            <h5 class="fw-bold text-pc">Relaciones a largo plazo</h5>
+                            <p class="mb-0">Buscamos partners fiables con los que crecer de forma sostenida en la zona.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card card-feature p-4 h-100">
+                            <div class="icon-pill mb-3"><i class="fas fa-shield-alt"></i></div>
+                            <h5 class="fw-bold text-pc">Seguridad y cumplimiento</h5>
+                            <p class="mb-0">Trabajamos conforme a normativa, PRL y estándares de calidad exigentes.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card card-feature p-4 h-100">
+                            <div class="icon-pill mb-3"><i class="fas fa-truck-loading"></i></div>
+                            <h5 class="fw-bold text-pc">Cadena de suministro ágil</h5>
+                            <p class="mb-0">Logística y aprovisionamiento coordinados para evitar paradas en obra.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card card-feature p-4 h-100">
+                            <div class="icon-pill mb-3"><i class="fas fa-leaf"></i></div>
+                            <h5 class="fw-bold text-pc">Sostenibilidad</h5>
+                            <p class="mb-0">Soluciones eficientes que reducen consumo de agua y energía.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPOS DE COLABORACIÓN -->
+    <section class="py-5 bg-pc-gradient text-white">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="fw-bold">Formas de colaborar</h2>
+                    <p class="mb-0">Dinos cómo puedes aportar valor y te contactamos para avanzar.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 h-100" style="background:rgba(255,255,255,.08); border-radius:16px;">
+                        <h5 class="fw-bold text-white mb-2"><i class="fas fa-toolbox me-2"></i>Subcontratas</h5>
+                        <p class="mb-0">Albañilería, estructuras, cerramientos, instalaciones (electricidad, fontanería,
+                            climatización), carpintería, paisajismo y más.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 h-100" style="background:rgba(255,255,255,.08); border-radius:16px;">
+                        <h5 class="fw-bold text-white mb-2"><i class="fas fa-boxes me-2"></i>Proveedores</h5>
+                        <p class="mb-0">Materiales certificados, equipamiento, maquinaria, prefabricados y soluciones
+                            innovadoras con garantía.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 h-100" style="background:rgba(255,255,255,.08); border-radius:16px;">
+                        <h5 class="fw-bold text-white mb-2"><i class="fas fa-drafting-compass me-2"></i>Partners
+                            técnicos</h5>
+                        <p class="mb-0">Estudios de arquitectura/ingeniería, real estate e instituciones para
+                            concurrencia a proyectos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASOS -->
+    <section class="container py-5">
+        <div class="row text-center mb-4">
+            <div class="col">
+                <h2 class="fw-bold text-pc">Cómo empezamos</h2>
+                <p class="mb-0">Proceso simple y transparente.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-feature p-4 h-100">
+                    <span class="badge rounded-pill bg-dark-subtle text-dark mb-3">1</span>
+                    <h5 class="fw-bold text-pc">Envíanos tus datos</h5>
+                    <p class="mb-0">Cuéntanos qué haces, zona de actuación y certificaciones. Te respondemos rápido.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-feature p-4 h-100">
+                    <span class="badge rounded-pill bg-dark-subtle text-dark mb-3">2</span>
+                    <h5 class="fw-bold text-pc">Validación técnica</h5>
+                    <p class="mb-0">Revisamos referencias, documentación PRL y homologación de proveedores.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-feature p-4 h-100">
+                    <span class="badge rounded-pill bg-dark-subtle text-dark mb-3">3</span>
+                    <h5 class="fw-bold text-pc">Colaboración en obra</h5>
+                    <p class="mb-0">Planificación conjunta, objetivos claros y seguimiento de hitos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container pb-5">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="p-4 p-md-5" style="background:#f6f8f7;">
+                    <h3 class="fw-bold text-pc mb-3">Preguntas frecuentes</h3>
+                    <div class="accordion" id="faqColabora">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#a1">¿Trabajáis fuera de Córdoba?</button>
+                            </h2>
+                            <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqColabora">
+                                <div class="accordion-body">Principalmente trabajamos en Puente Genil y comarca. Para
+                                    proyectos concretos valoramos desplazamientos.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#a2">¿Qué documentación solicitáis?</button>
+                            </h2>
+                            <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqColabora">
+                                <div class="accordion-body">Alta y seguro, certificados PRL, plan de seguridad,
+                                    referencias y fichas técnicas de materiales cuando aplique.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#a3">¿Cómo es la homologación de proveedores?</button>
+                            </h2>
+                            <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqColabora">
+                                <div class="accordion-body">Validamos calidad, plazos de suministro, garantías y
+                                    servicio postventa, además de cumplimiento legal.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA lateral -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+                <div class="p-4 p-md-5 bg-pc-gradient text-white w-100 rounded-3">
+                    <h3 class="fw-bold mb-2">¿Listo para colaborar?</h3>
+                    <p class="mb-4">Cuéntanos tu propuesta y contactaremos para concretar próximos pasos.</p>
+                    <a class="btn btn-outline-light rounded-pill px-4 fw-semibold btn-pc" href="#form-colabora">Abrir
+                        formulario</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="form-colabora" class="py-5 bg-pc-gradient text-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <h2 class="fw-bold mb-3">Formulario de colaboración</h2>
+                    <p class="mb-4">Rellena el formulario y nuestro equipo te responderá a la mayor brevedad.</p>
+                    <ul class="list-unstyled list-check">
+                        <li><i class="fas fa-check me-2"></i> Respuesta en 24–48h laborales</li>
+                        <li><i class="fas fa-check me-2"></i> Datos protegidos y uso exclusivo para contacto</li>
+                        <li><i class="fas fa-check me-2"></i> Sin compromiso</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-7">
+                    <form action="https://formsubmit.co/marketing@biofy.es" method="POST"
+                        class="bg-white text-dark p-4 p-md-5 rounded-4 shadow" enctype="multipart/form-data">
+                        <input type="hidden" name="_subject" value="Colaboración (web Pérez Cornejo)">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre y apellidos*</label>
+                                <input type="text" name="Nombre" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Empresa</label>
+                                <input type="text" name="Empresa" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email*</label>
+                                <input type="email" name="Email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Teléfono*</label>
+                                <input type="tel" name="Telefono" class="form-control" pattern="[0-9]{9}" maxlength="9"
+                                    inputmode="numeric" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Código Postal</label>
+                                <input type="text" name="CP" class="form-control" pattern="\d{5}" maxlength="5">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Tipo de colaboración*</label>
+                                <select class="form-select" name="Interes" required>
+                                    <option value="" selected disabled>Selecciona una opción</option>
+                                    <option>Subcontrata / gremio</option>
+                                    <option>Proveedor de materiales</option>
+                                    <option>Maquinaria / logística</option>
+                                    <option>Estudio técnico (arquitectura/ingeniería)</option>
+                                    <option>Otra colaboración</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Mensaje*</label>
+                                <textarea name="Mensaje" rows="5" class="form-control rounded-4"
+                                    placeholder="Cuéntanos experiencia, zona de trabajo y disponibilidad"
+                                    required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Documentación</label>
+                                <input type="file" name="Documentacion[]" class="form-control" multiple
+                                    accept=".pdf,.doc,.docx,.xls,.xlsx,.zip,.png,.jpg,.jpeg">
+                                <div class="form-text">Puedes adjuntar catálogos, certificaciones PRL, referencias o
+                                    dossier (máx. varios archivos).</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacidad" required>
+                                    <label class="form-check-label" for="privacidad">He leído y acepto la <a
+                                            href="politica_privacidad.html" target="_blank">política de
+                                            privacidad</a>.</label>
+                                </div>
+                            </div>
+                            <div class="col-12 d-grid d-md-block">
+                                <button type="submit" class="btn btn-dark rounded-pill px-4 mt-2"
+                                    style="background:var(--pc-oscuro); border:none;">Enviar solicitud</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGOS / APOYO INSTITUCIONAL (opcional, coherente con tu pie) -->
+    <section class="py-5">
+        <div class="container text-center">
+            <img src="img/juntadeandalucia.png" alt="Junta de Andalucía" class="img-fluid my-3"
+                style="max-width:200px;">
+        </div>
+    </section>
+
+    <!-- Scroll to Top -->
+    <a href="#top" class="btn btn-primary scroll-to-top" style="display:none; background-color:#748c64;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer (mismo de tu sitio) -->
+    <footer class="text-white py-5 bg-pc-gradient">
+        <div class="container text-center">
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 mb-4">
+                    <img src="img/logo_cornejo_blanco.png" alt="Pérez Cornejo" style="max-height:80px;"><br><br>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="aviso_legal.html" class="text-white text-decoration-none">Aviso Legal</a></li>
+                        <li><a href="politica_privacidad.html" class="text-white text-decoration-none">Política de
+                                privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Condiciones generales</a></li>
+                        <li><a href="politica_cookies.html" class="text-white text-decoration-none">Política de
+                                cookies</a></li>
+                    </ul>
+                </div>
+                <div><small>DISEÑADO Y DESARROLLADO POR HULKES</small><br>
+                    <small>Copyright © 2025 CONSTRUCCIONES MANUEL PÉREZ, S.L. | B14721138</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Widgets que ya usas -->
+    <button id="accessibility-toggle" style="background-color:#748c64;" onclick="toggleAccessibilityWidget()">🧩
+        Accesibilidad</button>
+    <div id="accessibility-widget">
+        <button onclick="toggleContrast()" style="background-color:#748c64;">Alto Contraste</button>
+        <button onclick="toggleGrayscale()" style="background-color:#748c64;">Escala de Grises</button>
+        <button onclick="increaseTextSize()" style="background-color:#748c64;">Aumentar Texto</button>
+        <button onclick="decreaseTextSize()" style="background-color:#748c64;">Reducir Texto</button>
+    </div>
+
+    <a id="whatsapp-chat" href="https://wa.me/655315935?text=Hola%2C%20quiero%20colaborar%20con%20ustedes"
+        target="_blank" aria-label="Chat de WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/1d01c0d3f8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/javascript.js"></script>
+
+    <script>
+        // Scroll to top (aparición)
+        const scrollBtn = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) { scrollBtn.style.display = 'block'; } else { scrollBtn.style.display = 'none'; }
+        });
+        // Accesibilidad (mismo JS que tu web)
+        let currentFontSize = 100;
+        function toggleAccessibilityWidget() {
+            const w = document.getElementById('accessibility-widget');
+            w.style.display = (w.style.display === 'none' || w.style.display === '') ? 'flex' : 'none';
+        }
+        function increaseTextSize() { currentFontSize += 10; document.body.style.fontSize = currentFontSize + '%'; }
+        function decreaseTextSize() { currentFontSize = Math.max(80, currentFontSize - 10); document.body.style.fontSize = currentFontSize + '%'; }
+        function toggleContrast() { document.body.classList.toggle('high-contrast'); }
+        function toggleGrayscale() { document.body.classList.toggle('grayscale'); }
+    </script>
+</body>
+
+</html>

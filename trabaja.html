@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabaja con nosotros | Constructora Pérez Cornejo</title>
+    <meta name="description"
+        content="¿Quieres unirte a nuestro equipo? Buscamos profesionales responsables y con ganas de crecer para construir proyectos de calidad.">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --pc-oscuro: #48494a;
+            --pc-verde: #748c64;
+        }
+
+        .bg-pc-gradient {
+            background: linear-gradient(135deg, var(--pc-oscuro), var(--pc-verde));
+        }
+
+        .text-pc {
+            color: var(--pc-oscuro) !important;
+        }
+
+        .btn-pc {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-pc:hover {
+            background: #2D4A8C;
+            /* mismo hover que usas en otras páginas */
+            border-color: #2D4A8C;
+            color: #fff;
+        }
+
+        .icon-pill {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(116, 140, 100, .12);
+            color: var(--pc-verde);
+            font-size: 28px;
+        }
+
+        .card-feature {
+            border: none;
+            background: #f6f8f7;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .card-feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .list-check li {
+            margin-bottom: .4rem
+        }
+
+        .list-check i {
+            color: var(--pc-verde)
+        }
+
+        .badge-soft {
+            background: rgba(72, 73, 74, .08);
+            color: var(--pc-oscuro);
+            border: 1px solid rgba(72, 73, 74, .12);
+        }
+
+        .accordion-button:focus {
+            box-shadow: none
+        }
+
+        .accordion-button {
+            font-weight: 600
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: #f4f5f5;
+            color: var(--pc-oscuro)
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 2rem
+        }
+
+        /* Aumenta la legibilidad del texto en el hero */
+        .hero-title {
+            text-shadow: 0 10px 28px rgba(0, 0, 0, .45), 0 2px 6px rgba(0, 0, 0, .25);
+        }
+
+        .hero-lead {
+            text-shadow: 0 8px 24px rgba(0, 0, 0, .45), 0 2px 6px rgba(0, 0, 0, .25);
+        }
+
+
+        /* === Trabaja: estilos diferenciados === */
+        .badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .badge-soft {
+            background: rgba(255, 255, 255, .2);
+            border: 1px solid rgba(255, 255, 255, .35);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .card-role {
+            transition: transform .2s ease, box-shadow .2s ease;
+            border: 0;
+        }
+
+        .card-role:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
+        }
+
+        .card-role .icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: #f1f5f9;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+        }
+
+        .timeline {
+            display: flex;
+            gap: 32px;
+            position: relative;
+            padding-left: 0;
+            list-style: none;
+            overflow-x: auto;
+        }
+
+        .timeline li {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px 18px;
+            min-width: 220px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+            border: 1px solid #eef2f7;
+        }
+
+        .timeline li::before {
+            content: counter(step);
+            counter-increment: step;
+            font-weight: 700;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: var(--pc-oscuro, #2d3f2d);
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .section-alt {
+            background: #f8fafc;
+        }
+
+        .faq-wrap {
+            background: #ffffff;
+            border: 1px solid #eef2f7;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+        }
+
+        .form-header {
+            font-weight: 700;
+            letter-spacing: .3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (igual estilo del sitio) -->
+    <header class="fixed-top shadow">
+        <div class="text-white py-1 px-3" style="font-size:14px;background: linear-gradient(135deg, #48494a, #748c64)">
+            <div class="container d-flex justify-content-center align-items-center flex-wrap">
+                <div class="fw-semibold text-center">
+                    <a href="tel:627593507" class="text-decoration-none" style="color:white;"> TRABAJA CON NOSOTROS</a>
+                </div>
+                &nbsp;&nbsp;
+                <a href="tel:627593507" class="text-decoration-none" style="color:white;">
+                    <img src="gif/telefono_blanco.gif" alt="" height="30" width="30"> 627 593 507
+                </a>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div class="d-flex gap-3 fw-semibold" style="text-align:center;">
+                <a href="mailto:info@construccionesmanuelperez.es" class="text-decoration-none" style="color:#ffffff;">
+                    info@construccionesmanuelperez.es
+                </a>
+            </div>
+        </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color:white;">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="img/Group 219.png" alt="Logo Pérez Cornejo" style="height:50px;">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="/">Inicio</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold text-dark" href="#" role="button"
+                                data-bs-toggle="dropdown">Servicios</a>
+                            <ul class="dropdown-menu border-0 shadow-sm" style="background-color:#c0c4c6;">
+                                <li><a class="dropdown-item text-white" href="naves-industriales.html">Naves
+                                        industriales</a></li>
+                                <li><a class="dropdown-item text-white" href="vivienda-nueva.html">Vivienda nueva</a>
+                                </li>
+                                <li><a class="dropdown-item text-white"
+                                        href="reforma-integral-de-viviendas.html">Reforma integral de viviendas</a></li>
+                                <li><a class="dropdown-item text-white" href="locales-comerciales.html">Locales
+                                        comerciales</a></li>
+                                <li><a class="dropdown-item text-white" href="piscinas.html">Piscinas</a></li>
+                                <li><a class="dropdown-item text-white" href="ampliaciones.html">Ampliaciones</a></li>
+                                <li><a class="dropdown-item text-white"
+                                        href="adecuacion-de-caminos-rurales.html">Adecuación de caminos rurales</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="colabora.html">Colabora con
+                                nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold text-dark active"
+                                href="trabaja.html">Trabaja con nosotros</a></li>
+
+                        <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="text-white d-flex align-items-center"
+        style="background: linear-gradient(0deg, rgba(20,28,20,.55), rgba(20,28,20,.55)), url('img/bg_trabaja.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:66vh;">
+        <div class="container py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-8">
+                    <span class="badge badge-soft rounded-pill px-3 py-2 mb-3">Empleo y Talento</span>
+                    <h1 class="display-4 fw-bold mb-3 hero-title">Únete a Constructora Pérez Cornejo</h1>
+                    <div class="badges mt-2"><span class="badge-soft">Estabilidad</span><span
+                            class="badge-soft">Seguridad y PRL</span><span class="badge-soft">Buen ambiente</span><span
+                            class="badge-soft">Crecimiento</span></div>
+                    <p class="lead mb-4 hero-lead">Construimos juntos tu carrera profesional con proyectos reales,
+                        equipos cercanos y compromiso con la calidad.</p>
+                    <a href="#form-trabaja" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold btn-pc">Ver
+                        vacantes / Enviar CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="height:0;line-height:0;"><svg viewBox="0 0 100 6" preserveAspectRatio="none"
+            style="display:block;width:100%;height:48px;">
+            <polygon fill="#f8fafc" points="0,6 100,0 100,6" />
+        </svg></div>
+
+    <!-- POR QUÉ COLABORAR -->
+    <section class="container py-5">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <h2 class="fw-bold text-pc mb-3">¿Por qué trabajar con nosotros?</h2>
+                <p class="mb-3">Somos una constructora con trayectoria en vivienda nueva, reformas y obra civil en la
+                    provincia de Córdoba. Buscamos personas responsables, resolutivas y con orientación al detalle para
+                    crecer y aportar valor en obra y oficina.</p>
+                <ul class="list-unstyled list-check">
+                    <li><i class="fas fa-check me-2"></i> Compromiso con la calidad y los plazos.</li>
+                    <li><i class="fas fa-check me-2"></i> Comunicación cercana y planificación rigurosa.</li>
+                    <li><i class="fas fa-check me-2"></i> Seguridad y normativa como prioridad.</li>
+                    <li><i class="fas fa-check me-2"></i> Visión sostenible y eficiente.</li>
+                </ul>
+                <div class="d-flex gap-2 mt-3">
+                    <span class="badge rounded-pill px-3 py-2 badge-soft">Construcción</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-soft">Instalaciones</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-soft">Materiales</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-soft">Ingeniería</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="card card-feature p-4 h-100">
+                            <div class="icon-pill mb-3"><i class="fas fa-handshake"></i></div>
+                            <h5 class="fw-bold text-pc">Crecimiento y estabilidad</h5>
+                            <p class="mb-0">Plan de desarrollo y estabilidad laboral en una empresa en crecimiento.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card card-feature p-4 h-100">
+                            <div class="icon-pill mb-3"><i class="fas fa-shield-alt"></i></div>
+                            <h5 class="fw-bold text-pc">Seguridad y PRL</h5>
+                            <p class="mb-0">La seguridad es lo primero: PRL, formación continua y equipos adecuados.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card card-feature p-4 h-100">
+                            <div class="icon-pill mb-3"><i class="fas fa-truck-loading"></i></div>
+                            <h5 class="fw-bold text-pc">Buen ambiente y equipo</h5>
+                            <p class="mb-0">Ambiente cercano, trabajo en equipo y comunicación directa con responsables.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card card-feature p-4 h-100">
+                            <div class="icon-pill mb-3"><i class="fas fa-leaf"></i></div>
+                            <h5 class="fw-bold text-pc">Condiciones competitivas</h5>
+                            <p class="mb-0">Condiciones acordes al mercado, herramientas y medios para hacer bien tu
+                                trabajo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPOS DE COLABORACIÓN -->
+    <section class="py-5 bg-pc-gradient text-white">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="fw-bold">Áreas de trabajo</h2>
+                    <p class="mb-0">Cuéntanos dónde encajas mejor. Si no ves tu perfil exacto, envía tu CV igualmente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 h-100" style="background:rgba(255,255,255,.08); border-radius:16px;">
+                        <h5 class="fw-bold text-white mb-2"><i class="fas fa-toolbox me-2"></i>Oficios / Operarios</h5>
+                        <p class="mb-0">Albañilería, estructuras, cerramientos, instalaciones (electricidad, fontanería,
+                            climatización), carpintería, etc.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 h-100" style="background:rgba(255,255,255,.08); border-radius:16px;">
+                        <h5 class="fw-bold text-white mb-2"><i class="fas fa-boxes me-2"></i>Técnicos de obra</h5>
+                        <p class="mb-0">Jefe/a de obra, encargado/a, apoyo técnico de producción, calidad y mediciones.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 h-100" style="background:rgba(255,255,255,.08); border-radius:16px;">
+                        <h5 class="fw-bold text-white mb-2"><i class="fas fa-drafting-compass me-2"></i>Administración /
+                            Oficina</h5>
+                        <p class="mb-0">Atención al cliente, administración, compras, logística y soporte a obra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASOS -->
+    <section class="container py-5">
+        <div class="row text-center mb-4">
+            <div class="col">
+                <h2 class="fw-bold text-pc">Cómo es el proceso</h2>
+                <p class="mb-0">Transparente, cercano y rápido.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-feature p-4 h-100">
+                    <span class="badge rounded-pill bg-dark-subtle text-dark mb-3">1</span>
+                    <h5 class="fw-bold text-pc">1. Envíanos tu candidatura</h5>
+                    <p class="mb-0">Rellena el formulario o envíanos tu CV. Indica tu área de interés y disponibilidad.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-feature p-4 h-100">
+                    <span class="badge rounded-pill bg-dark-subtle text-dark mb-3">2</span>
+                    <h5 class="fw-bold text-pc">2. Entrevista</h5>
+                    <p class="mb-0">Hablamos contigo para conocerte mejor y resolver dudas sobre el puesto.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-feature p-4 h-100">
+                    <span class="badge rounded-pill bg-dark-subtle text-dark mb-3">3</span>
+                    <h5 class="fw-bold text-pc">3. Incorporación</h5>
+                    <p class="mb-0">Plan de acogida en obra u oficina, objetivos claros y acompañamiento inicial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container pb-5">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="p-4 p-md-5" style="background:#f6f8f7;">
+                    <h3 class="fw-bold text-pc mb-3">Preguntas frecuentes</h3>
+                    <div class="accordion faq-wrap" id="faqTrabaja">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#a1">¿Ofrecéis puestos fuera de Córdoba?</button>
+                            </h2>
+                            <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqTrabaja">
+                                <div class="accordion-body">Principalmente trabajamos en Puente Genil y comarca. Para
+                                    posiciones puntuales podemos valorar desplazamientos.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#a2">¿Qué perfil buscáis?</button>
+                            </h2>
+                            <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqTrabaja">
+                                <div class="accordion-body">Personas responsables, con orientación al detalle y ganas de
+                                    crecer. Valorable PRL y experiencia previa.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#a3">¿Qué beneficios ofrecéis?</button>
+                            </h2>
+                            <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqTrabaja">
+                                <div class="accordion-body">Formación, estabilidad, buen ambiente, equipamiento y
+                                    comunicación directa con responsables.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA lateral -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+                <div class="p-4 p-md-5 bg-pc-gradient text-white w-100 rounded-3">
+                    <h3 class="fw-bold mb-2">¿Te gustaría trabajar con nosotros?</h3>
+                    <p class="mb-4">Cuéntanos tu perfil y te contactaremos para una entrevista.</p>
+                    <a class="btn btn-outline-light rounded-pill px-4 fw-semibold btn-pc" href="#form-trabaja">Abrir
+                        formulario</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="form-trabaja" class="py-5 bg-pc-gradient text-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <h2 class="fw-bold mb-3">Envía tu candidatura <span
+                            class="form-header d-block fs-6 text-muted fw-normal mt-1">Te responderemos lo antes
+                            posible</span></h2>
+                    <p class="mb-4">Rellena el formulario y adjunta tu CV si lo deseas. Te responderemos lo antes
+                        posible.</p>
+                    <ul class="list-unstyled list-check">
+                        <li><i class="fas fa-check me-2"></i> Respuesta en 24–48h laborales</li>
+                        <li><i class="fas fa-check me-2"></i> Datos protegidos y uso exclusivo para contacto</li>
+                        <li><i class="fas fa-check me-2"></i> Sin compromiso</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-7">
+
+                    <form action="https://formsubmit.co/marketing@biofy.es" method="POST"
+                        class="bg-white text-dark p-4 p-md-5 rounded-4 shadow" enctype="multipart/form-data">
+                        <input type="hidden" name="_subject" value="Candidatura (web Pérez Cornejo)">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre y apellidos*</label>
+                                <input type="text" name="Nombre" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email*</label>
+                                <input type="email" name="Email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Teléfono*</label>
+                                <input type="tel" name="Telefono" class="form-control" pattern="[0-9]{9}" maxlength="9"
+                                    inputmode="numeric" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Puesto de interés*</label>
+                                <select class="form-select" name="Puesto" required>
+                                    <option value="" selected disabled>Selecciona un área</option>
+                                    <option>Oficios / Operario</option>
+                                    <option>Técnico/a de obra</option>
+                                    <option>Administración / Oficina</option>
+                                    <option>Prácticas / Junior</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Experiencia (años)</label>
+                                <input type="number" name="Experiencia" class="form-control" min="0" max="50" step="1"
+                                    placeholder="por ejemplo: 3">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Enlace (LinkedIn / web)</label>
+                                <input type="url" name="Enlace" class="form-control" placeholder="https://...">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Mensaje*</label>
+                                <textarea name="Mensaje" rows="5" class="form-control rounded-4"
+                                    placeholder="Cuéntanos tu disponibilidad, ubicación y por qué te interesa el puesto"
+                                    required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">CV</label>
+                                <input type="file" name="CV" class="form-control" accept=".pdf,.doc,.docx">
+                                <div class="form-text">Adjunta tu currículum en PDF o Word (opcional).</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacidad" required>
+                                    <label class="form-check-label" for="privacidad">He leído y acepto la <a
+                                            href="politica_privacidad.html" target="_blank">política de
+                                            privacidad</a>.</label>
+                                </div>
+                            </div>
+                            <div class="col-12 d-grid d-md-block">
+                                <button type="submit" class="btn btn-dark rounded-pill px-4 mt-2"
+                                    style="background:var(--pc-oscuro); border:none;">Enviar candidatura</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGOS / APOYO INSTITUCIONAL (opcional, coherente con tu pie) -->
+
+    <section class="py-4 bg-white border-bottom">
+        <div class="container">
+            <div class="row text-center g-3">
+                <div class="col-6 col-md-3">
+                    <div>
+                        <div class="fs-2 fw-bold">15+</div>
+                        <div class="text-muted">Años de experiencia</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div>
+                        <div class="fs-2 fw-bold">120+</div>
+                        <div class="text-muted">Obras ejecutadas</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div>
+                        <div class="fs-2 fw-bold">98%</div>
+                        <div class="text-muted">Clientes satisfechos</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div>
+                        <div class="fs-2 fw-bold">PRL</div>
+                        <div class="text-muted">Formación continua</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5" style="background:linear-gradient(0deg,#2f3c2f,#273427);">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="h3 mb-1">Beneficios</h2>
+                    <p class="text-white-50">Queremos que trabajes a gusto y con seguridad.</p>
+                </div>
+            </div>
+            <div class="row g-4 pt-2">
+                <div class="col-md-3">
+                    <div>
+                        <div class="fs-3 fw-bold">PRL</div>
+                        <div class="text-white-50">Formación y EPIs</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <div class="fs-3 fw-bold">🧰</div>
+                        <div class="text-white-50">Herramientas y medios</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <div class="fs-3 fw-bold">📅</div>
+                        <div class="text-white-50">Planificación clara</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <div class="fs-3 fw-bold">🤝</div>
+                        <div class="text-white-50">Buen ambiente</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 section-alt">
+        <div class="container text-center">
+            <img src="img/juntadeandalucia.png" alt="Junta de Andalucía" class="img-fluid my-3"
+                style="max-width:200px;">
+        </div>
+    </section>
+
+    <!-- Scroll to Top -->
+    <a href="#top" class="btn btn-primary scroll-to-top" style="display:none; background-color:#748c64;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer (mismo de tu sitio) -->
+    <footer class="text-white py-5 bg-pc-gradient">
+        <div class="container text-center">
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 mb-4">
+                    <img src="img/logo_cornejo_blanco.png" alt="Pérez Cornejo" style="max-height:80px;"><br><br>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="aviso_legal.html" class="text-white text-decoration-none">Aviso Legal</a></li>
+                        <li><a href="politica_privacidad.html" class="text-white text-decoration-none">Política de
+                                privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Condiciones generales</a></li>
+                        <li><a href="politica_cookies.html" class="text-white text-decoration-none">Política de
+                                cookies</a></li>
+                    </ul>
+                </div>
+                <div><small>DISEÑADO Y DESARROLLADO POR HULKES</small><br>
+                    <small>Copyright © 2025 CONSTRUCCIONES MANUEL PÉREZ, S.L. | B14721138</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Widgets que ya usas -->
+    <button id="accessibility-toggle" style="background-color:#748c64;" onclick="toggleAccessibilityWidget()">🧩
+        Accesibilidad</button>
+    <div id="accessibility-widget">
+        <button onclick="toggleContrast()" style="background-color:#748c64;">Alto Contraste</button>
+        <button onclick="toggleGrayscale()" style="background-color:#748c64;">Escala de Grises</button>
+        <button onclick="increaseTextSize()" style="background-color:#748c64;">Aumentar Texto</button>
+        <button onclick="decreaseTextSize()" style="background-color:#748c64;">Reducir Texto</button>
+    </div>
+
+    <a id="whatsapp-chat" href="https://wa.me/655315935?text=Hola%2C%20quiero%20trabajar%20con%20ustedes"
+        target="_blank" aria-label="Chat de WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/1d01c0d3f8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/javascript.js"></script>
+
+    <script>
+        // Scroll to top (aparición)
+        const scrollBtn = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) { scrollBtn.style.display = 'block'; } else { scrollBtn.style.display = 'none'; }
+        });
+        // Accesibilidad (mismo JS que tu web)
+        let currentFontSize = 100;
+        function toggleAccessibilityWidget() {
+            const w = document.getElementById('accessibility-widget');
+            w.style.display = (w.style.display === 'none' || w.style.display === '') ? 'flex' : 'none';
+        }
+        function increaseTextSize() { currentFontSize += 10; document.body.style.fontSize = currentFontSize + '%'; }
+        function decreaseTextSize() { currentFontSize = Math.max(80, currentFontSize - 10); document.body.style.fontSize = currentFontSize + '%'; }
+        function toggleContrast() { document.body.classList.toggle('high-contrast'); }
+        function toggleGrayscale() { document.body.classList.toggle('grayscale'); }
+    </script>
+</body>
+
+</html>
